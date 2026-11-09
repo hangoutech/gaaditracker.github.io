@@ -89,17 +89,22 @@ Download the official badges from <https://play.google.com/intl/en_us/badges/> a
 
 Every push to `main` builds the site and publishes it to GitHub Pages (`.github/workflows/deploy.yml`). In the repo, **Settings → Pages → Source** must be **GitHub Actions**. Don't use "Deploy from a branch": that runs Jekyll on the source files and fails.
 
-The site is served at **https://gaaditracker.in** (custom domain set in **Settings → Pages → Custom domain**). The address is set in `src/data/site-url.mjs`:
+The site is served at **https://hangoutech.com/gaaditracker.github.io/**. The address is set in `src/data/site-url.mjs`:
 
 ```js
-export const SITE_ORIGIN = 'https://gaaditracker.in';
-export const BASE_PATH = '';   // '/gaaditracker.github.io' if served from the GitHub sub-folder instead
+export const SITE_ORIGIN = 'https://hangoutech.com';
+export const BASE_PATH = '/gaaditracker.github.io';
 ```
 
 Every link, canonical URL, sitemap entry, share image, `robots.txt` and `llms.txt` follows these two lines. In `.astro` files, write internal links with the `url()` helper from `src/data/site.ts` (`href={url('/pricing')}`); in Markdown use relative links (`../pricing/`).
 
-Locally the dev server runs at http://localhost:4321/.
+Locally the dev server runs at http://localhost:4321/gaaditracker.github.io/.
 
-### DNS for gaaditracker.in
+### Moving to gaaditracker.in later
+
+1. Set `SITE_ORIGIN = 'https://gaaditracker.in'` and `BASE_PATH = ''` in `src/data/site-url.mjs`.
+2. In **Settings → Pages → Custom domain**, enter `gaaditracker.in`.
+3. Fix DNS as below, then push.
+
 
 At the domain registrar, the apex `gaaditracker.in` needs **only** GitHub's four A records: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153 (remove any parking or forwarding records), and `www` a CNAME to `hangoutech.github.io`. Once GitHub has issued the certificate, tick **Enforce HTTPS** in Settings → Pages.

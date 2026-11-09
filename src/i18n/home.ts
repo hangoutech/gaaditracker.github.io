@@ -31,6 +31,8 @@ export const home = {
       ],
       seen: 'Seen 10:33 pm · no reply',
       chatLabel: 'Chat: the owner asks at 10 pm how much was made. The driver says around 3200, CNG 1100, will settle tomorrow. The question about km gets no reply.',
+      noteAsk: 'ask Ravi for Tues',
+      noteLabel: 'Notebook page: km readings with a smudged number and a crossed-out figure, a CNG bill with a question mark, an advance marked paid?, and a note to ask Ravi about Tuesday.',
     },
     story: {
       eyebrow: 'How it works',
@@ -154,6 +156,8 @@ export const home = {
       ],
       seen: 'Seen 10:33 pm · कोई जवाब नहीं',
       chatLabel: 'चैट: मालिक रात 10 बजे पूछता है आज कितना हुआ। ड्राइवर कहता है 3200 के आसपास, CNG 1100, कल हिसाब करेंगे। km वाले सवाल का जवाब नहीं आता।',
+      noteAsk: 'Ravi se Tues ka poochna',
+      noteLabel: 'कॉपी का पन्ना: धुंधला और कटा हुआ km, सवालिया निशान वाला CNG बिल, “paid?” लिखा एडवांस, और Ravi से मंगलवार का हिसाब पूछने का नोट।',
     },
     story: {
       eyebrow: 'कैसे काम करता है',

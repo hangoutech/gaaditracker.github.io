@@ -96,7 +96,18 @@ const dayCss = c.day.rows
       <h2 class="text-[2.6rem] sm:text-[3.75rem]">{c.pain.h2}</h2>
       <p class="mt-6 max-w-md text-[1.25rem] text-muted">{c.pain.sub}</p>
     </div>
-    <div class="chat mx-auto w-full max-w-sm rounded-[1.75rem] bg-[#e5e5ea] p-5 dark:bg-[#1c1c1e]" role="img" aria-label={c.pain.chatLabel}>
+    <div class="pain-art mx-auto w-full max-w-[34rem]">
+    <div class="note" role="img" aria-label={c.pain.noteLabel}>
+      <div aria-hidden="true">
+        <p class="font-semibold">Nov — 4521</p>
+        <p>9/11 &nbsp; 47,860 → 48,04<span class="smudge">?</span></p>
+        <p>10/11 &nbsp; <s>48,040</s> 48,051 → 48,210</p>
+        <p>CNG 1,100 + 600 <span class="text-[#b42318]">(bill?)</span></p>
+        <p>adv 2,000 given ✓ &nbsp; <span class="text-[#b42318]">paid?</span></p>
+        <p class="text-[#6e6e73]">{c.pain.noteAsk}</p>
+      </div>
+    </div>
+    <div class="chat rounded-[1.75rem] bg-[#e5e5ea] p-5 dark:bg-[#1c1c1e]" role="img" aria-label={c.pain.chatLabel}>
       <div aria-hidden="true" class="flex flex-col gap-2.5 text-[1rem] leading-snug text-[#1d1d1f]">
         <p class="mb-1 text-[0.8125rem] font-medium text-[#6e6e73] dark:text-[var(--deep-muted)]">Ravi · TN 23 TK 4521</p>
         {c.pain.chat.map((m, i) => (
@@ -109,6 +120,7 @@ const dayCss = c.day.rows
         ))}
         <p class="bubble text-right text-[0.75rem] text-[#6e6e73] dark:text-[var(--deep-muted)]" style="--t:4s">{c.pain.seen}</p>
       </div>
+    </div>
     </div>
   </section>
 
@@ -417,6 +429,36 @@ const dayCss = c.day.rows
   @keyframes float { 50% { translate: 0 -10px; } }
 
   /* Chat bubbles pop in once the section reveals, with a typing pause before Ravi answers. */
+  /* Pain: a ruled notebook page tucked behind the chat */
+  .pain-art { display: grid; }
+  .chat { position: relative; z-index: 1; width: 86%; max-width: 25rem; justify-self: end; margin-top: -1.75rem; box-shadow: 0 24px 48px -28px rgb(31 25 21 / 0.45); }
+  .note {
+    position: relative; width: 80%; max-width: 21rem; justify-self: start;
+    padding: 1.25rem 1rem 3rem 2.9rem; border-radius: 3px; color: #26364f;
+    font-size: 0.875rem; line-height: 2rem; font-variant-numeric: tabular-nums;
+    background-color: #fffdf6;
+    background-image:
+      linear-gradient(90deg, transparent 2.1rem, #f2a7a7 2.1rem, #f2a7a7 2.2rem, transparent 2.2rem),
+      repeating-linear-gradient(transparent 0 calc(2rem - 1px), #c9daf0 calc(2rem - 1px) 2rem);
+    background-position: 0 1.25rem;
+    transform: rotate(-3deg);
+    box-shadow: 0 18px 36px -22px rgb(31 25 21 / 0.55);
+    transition: transform 0.5s cubic-bezier(0.3, 0.8, 0.2, 1);
+  }
+  .note p { white-space: nowrap; overflow: hidden; }
+  .note s { text-decoration-color: #b42318; text-decoration-thickness: 2px; }
+  .note .smudge { filter: blur(1.4px); }
+  @media (hover: hover) { .pain-art:hover .note { transform: rotate(-5deg) translate(-6px, -4px); } }
+  @media (max-width: 639px) { .note { width: 92%; } .chat { width: 100%; } }
+  /* Lines are "written" one by one as the section comes in */
+  .js .note p { clip-path: inset(0 100% 0 0); transition: clip-path 0.7s steps(18, end); }
+  .js .in .note p { clip-path: inset(0 0 0 0); }
+  .js .in .note p:nth-child(1) { transition-delay: 0.2s; }
+  .js .in .note p:nth-child(2) { transition-delay: 0.7s; }
+  .js .in .note p:nth-child(3) { transition-delay: 1.2s; }
+  .js .in .note p:nth-child(4) { transition-delay: 1.7s; }
+  .js .in .note p:nth-child(5) { transition-delay: 2.2s; }
+  .js .in .note p:nth-child(6) { transition-delay: 2.7s; }
   .js .bubble { opacity: 0; transform: translateY(10px) scale(0.96); transition: opacity 0.5s, transform 0.5s cubic-bezier(0.3, 0.8, 0.2, 1); transition-delay: var(--t, 0s); }
   .js .in .bubble { opacity: 1; transform: none; }
   .typing { display: none; }
@@ -515,6 +557,8 @@ const dayCss = c.day.rows
   @media (prefers-reduced-motion: reduce) {
     .hero-in, .slot, .q, .phones, .lg-panel, .hero-grid { animation: none; }
     .js .bubble { opacity: 1; transform: none; }
+    .js .note p { clip-path: none; transition: none; }
+    .note, .pain-art:hover .note { transition: none; }
     .js .typing { display: none; }
   }
 </style>
