@@ -28,22 +28,22 @@
 
 ## Pages
 
-- [Home](https://hangoutech.com/gaaditracker.github.io/): overview of the product
-- [Taxi and cab owners](https://hangoutech.com/gaaditracker.github.io/taxi-fleet-management-app/)
-- [Auto-rickshaw owners](https://hangoutech.com/gaaditracker.github.io/auto-rickshaw-owner-app/)
-- [Lorry and truck owners](https://hangoutech.com/gaaditracker.github.io/truck-fleet-management-app/)
-- [Driver commission and salary calculator](https://hangoutech.com/gaaditracker.github.io/driver-salary-commission-calculator/)
-- [Features](https://hangoutech.com/gaaditracker.github.io/features/)
-- [FAQ](https://hangoutech.com/gaaditracker.github.io/faq/)
-- [Gaadi Tracker vs notebook and WhatsApp](https://hangoutech.com/gaaditracker.github.io/gaadi-tracker-vs-notebook-whatsapp/)
-- [Pricing](https://hangoutech.com/gaaditracker.github.io/pricing/)
+- [Home](https://gaaditracker.in/): overview of the product
+- [Taxi and cab owners](https://gaaditracker.in/taxi-fleet-management-app/)
+- [Auto-rickshaw owners](https://gaaditracker.in/auto-rickshaw-owner-app/)
+- [Lorry and truck owners](https://gaaditracker.in/truck-fleet-management-app/)
+- [Driver commission and salary calculator](https://gaaditracker.in/driver-salary-commission-calculator/)
+- [Features](https://gaaditracker.in/features/)
+- [FAQ](https://gaaditracker.in/faq/)
+- [Gaadi Tracker vs notebook and WhatsApp](https://gaaditracker.in/gaadi-tracker-vs-notebook-whatsapp/)
+- [Pricing](https://gaaditracker.in/pricing/)
 
 ## Guides
 
-- [How to calculate driver commission for Uber and Ola cars](https://hangoutech.com/gaaditracker.github.io/blog/driver-commission-uber-ola-cars/)
-- [Road tax due dates for commercial vehicles in India, quarter by quarter](https://hangoutech.com/gaaditracker.github.io/blog/road-tax-due-dates-commercial-vehicles-india/)
-- [How to stop fuel bill padding in your fleet](https://hangoutech.com/gaaditracker.github.io/blog/stop-fuel-bill-padding/)
+- [How to calculate driver commission for Uber and Ola cars](https://gaaditracker.in/blog/driver-commission-uber-ola-cars/)
+- [Road tax due dates for commercial vehicles in India, quarter by quarter](https://gaaditracker.in/blog/road-tax-due-dates-commercial-vehicles-india/)
+- [How to stop fuel bill padding in your fleet](https://gaaditracker.in/blog/stop-fuel-bill-padding/)
 
 ## Hindi
 
-- [होम](https://hangoutech.com/gaaditracker.github.io/hi/), [टैक्सी](https://hangoutech.com/gaaditracker.github.io/hi/taxi-fleet-management-app/), [ऑटो](https://hangoutech.com/gaaditracker.github.io/hi/auto-rickshaw-owner-app/), [ट्रक](https://hangoutech.com/gaaditracker.github.io/hi/truck-fleet-management-app/)
+- [होम](https://gaaditracker.in/hi/), [टैक्सी](https://gaaditracker.in/hi/taxi-fleet-management-app/), [ऑटो](https://gaaditracker.in/hi/auto-rickshaw-owner-app/), [ट्रक](https://gaaditracker.in/hi/truck-fleet-management-app/)
