@@ -1,5 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
+import '@fontsource/kalam/latin-400.css';
+import '@fontsource/kalam/latin-700.css';
 import Odometer from './Odometer.astro';
 import PlayBadges from './PlayBadges.astro';
 import Placeholder from './Placeholder.astro';
@@ -434,8 +436,8 @@ const dayCss = c.day.rows
   .chat { position: relative; z-index: 1; width: 86%; max-width: 25rem; justify-self: end; margin-top: -1.75rem; box-shadow: 0 24px 48px -28px rgb(31 25 21 / 0.45); }
   .note {
     position: relative; width: 80%; max-width: 21rem; justify-self: start;
-    padding: 1.25rem 1rem 3rem 2.9rem; border-radius: 3px; color: #26364f;
-    font-size: 0.875rem; line-height: 2rem; font-variant-numeric: tabular-nums;
+    padding: 1.25rem 1rem 3rem 2.9rem; border-radius: 3px; color: #1f3a6b;
+    font-family: 'Kalam', 'Google Sans', cursive; font-size: 1.0625rem; line-height: 2rem; letter-spacing: 0.01em;
     background-color: #fffdf6;
     background-image:
       linear-gradient(90deg, transparent 2.1rem, #f2a7a7 2.1rem, #f2a7a7 2.2rem, transparent 2.2rem),
@@ -446,6 +448,12 @@ const dayCss = c.day.rows
     transition: transform 0.5s cubic-bezier(0.3, 0.8, 0.2, 1);
   }
   .note p { white-space: nowrap; overflow: hidden; }
+  .note p:nth-child(2) { transform: rotate(-0.6deg) translateX(1px); }
+  .note p:nth-child(3) { transform: rotate(0.4deg); }
+  .note p:nth-child(4) { transform: rotate(-0.3deg) translateX(3px); }
+  .note p:nth-child(5) { transform: rotate(0.7deg) translateX(-1px); }
+  .note p:nth-child(6) { transform: rotate(-0.8deg) translateX(6px); }
+  .note p:first-child { font-weight: 700; }
   .note s { text-decoration-color: #b42318; text-decoration-thickness: 2px; }
   .note .smudge { filter: blur(1.4px); }
   @media (hover: hover) { .pain-art:hover .note { transform: rotate(-5deg) translate(-6px, -4px); } }

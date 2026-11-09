@@ -1,4 +1,6 @@
 ---
+import '@fontsource/kalam/latin-400.css';
+import '@fontsource/kalam/latin-700.css';
 /** A WhatsApp-style chat and a notebook page, drawn in HTML. No real brand chrome. */
 interface Props { lang?: 'en' | 'hi' }
 const hi = Astro.props.lang === 'hi';
@@ -30,6 +32,7 @@ const hi = Astro.props.lang === 'hi';
 
 <style>
   .notebook {
+    font-family: 'Kalam', 'Google Sans', cursive; color: #1f3a6b; font-size: 1.0625rem;
     background-color: #fffdf6;
     background-image:
       linear-gradient(90deg, transparent 2.25rem, #f2a7a7 2.25rem, #f2a7a7 2.35rem, transparent 2.35rem),
