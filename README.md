@@ -5,7 +5,7 @@ Marketing site for Gaadi Tracker, the fleet management and driver hisab app for 
 - **Stack:** [Astro](https://astro.build) (static output), [Tailwind CSS](https://tailwindcss.com) v4, MDX for guides and legal pages.
 - **Font:** Google Sans (open source, OFL, from Google Fonts), self-hosted through Fontsource. One family covers headings, body, Hindi (Devanagari) and the ₹ sign.
 - **JavaScript sent to visitors:** only the theme toggle, menus, the pay calculator and the contact form. Everything else is plain HTML.
-- **Hosting:** GitHub Pages, deployed by GitHub Actions on every push to `main`.
+- **Hosting:** GitHub Pages. `npm run deploy` builds the site and publishes it.
 
 ## Run it locally
 
@@ -87,7 +87,15 @@ Download the official badges from <https://play.google.com/intl/en_us/badges/> a
 
 ## Deploy
 
-Every push to `main` builds the site and publishes it to GitHub Pages (`.github/workflows/deploy.yml`). In the repo, **Settings → Pages → Source** must be **GitHub Actions**. Don't use "Deploy from a branch": that runs Jekyll on the source files and fails.
+```bash
+npm run deploy
+```
+
+That type-checks, builds `dist/`, and pushes the built site to the `gh-pages` branch. The publish includes `.nojekyll`, so GitHub Pages serves the `_astro` assets as static files.
+
+In the repo, set **Settings → Pages → Build and deployment → Source** to **Deploy from a branch**, branch **`gh-pages`**, folder **`/ (root)`**.
+
+Pushes to `main` also run `.github/workflows/deploy.yml`. That workflow publishes only when the Pages source is **GitHub Actions**. Use one source. `npm run deploy` is the branch publish.
 
 The site is served at **https://hangoutech.com/gaaditracker.github.io/**. The address is set in `src/data/site-url.mjs`:
 
