@@ -1,0 +1,49 @@
+# Gaadi Tracker
+
+> Gaadi Tracker is a fleet management and driver hisab app for taxi, auto and truck owners in India. It is two Android apps that share one account: Gaadi Tracker Owner (for the fleet owner) and Gaadi Tracker Driver (for each driver). Drivers log odometer km, earnings, fuel and expenses on their phone; the owner sees every shift, settles driver pay and gets road tax and service reminders. Built for owners running 2 to 50 vehicles.
+
+## Key facts
+
+- Apps: Gaadi Tracker Owner (Android, com.developerssays.gaadimate.owner) and Gaadi Tracker Driver (Android, com.developerssays.gaadimate).
+- For: cab and taxi fleets on Uber, Ola and Rapido; auto-rickshaw owners; lorry and truck transporters; van and bus operators in India.
+- Odometer check: a shift's start km can't be below the vehicle's last reading; the end km must be higher than the start.
+- Earnings by platform, named by the owner (e.g. Uber, Ola, Rapido, local trips). Lorry and truck earnings are entered as tons × rate per ton.
+- Fuel: petrol, diesel, CNG (in kg), LPG; drivers only see the fuel types their vehicle uses. Also FASTag and expenses (parking, service, repair, tyre, cleaning, app recharge, other).
+- Driver pay models: percentage of revenue; slab (one rate below a daily revenue slab, a higher rate at or above it, applied to the whole day); fixed daily rent paid by the driver; monthly salary spread over 26 working days. Changing a rule keeps old shifts on the old rule.
+- Driver balance: revenue − expenses + advances − payments to owner, shown as "Balance to pay owner" or "Owner owes you".
+- Approvals: driver edits to shift times/km, past trips (up to one year back) and recorded services need owner approval; rejecting restores the original. Approved shifts are locked.
+- Reminders: service by km or date, whichever comes first; quarterly road tax for lorries, trucks, vans and buses with "Mark paid". Driver reminders never block a shift.
+- Reports: revenue, fuel, expenses, driver cost and profit by vehicle, driver, platform or date range; CSV and PDF export. Fuel average (km per litre or per kg) for heavy vehicles.
+- Works offline: entries save on the driver's phone and sync when the network returns.
+- Languages: English, Tamil, Hindi, Tanglish (Tamil in English letters) and Hinglish (Hindi in English letters). Each driver picks their own.
+- Drivers see only their own data; owners see the whole fleet.
+
+## Pricing (in Indian rupees)
+
+- Free: 1–2 vehicles, ₹0 forever. Unlimited drivers, shifts, earnings, fuel and expense entries, driver balance, offline use.
+- Fleet: 3–50 vehicles, ₹49 per vehicle per month (launch price), or ₹490 per vehicle per year (2 months free). The first 2 vehicles are always free. Adds the 4 driver pay rules, approvals, shift locking, service and road tax reminders, full reports with export, push notifications.
+- Enterprise: 51+ vehicles, custom price. Never blocked: keeps ₹49 per vehicle until the price is agreed.
+- Bill = (Active + Inactive vehicles − 2) × ₹49 a month, never below ₹0. Examples: 3 → ₹49, 5 → ₹147, 8 → ₹294, 15 → ₹637, 50 → ₹2,352. Disabled (sold or retired) vehicles are free.
+- Drivers are always free. 30-day free trial of all Fleet features for every new fleet, no card needed.
+
+## Pages
+
+- [Home](https://hangoutech.com/gaaditracker.github.io/): overview of the product
+- [Taxi and cab owners](https://hangoutech.com/gaaditracker.github.io/taxi-fleet-management-app/)
+- [Auto-rickshaw owners](https://hangoutech.com/gaaditracker.github.io/auto-rickshaw-owner-app/)
+- [Lorry and truck owners](https://hangoutech.com/gaaditracker.github.io/truck-fleet-management-app/)
+- [Driver commission and salary calculator](https://hangoutech.com/gaaditracker.github.io/driver-salary-commission-calculator/)
+- [Features](https://hangoutech.com/gaaditracker.github.io/features/)
+- [FAQ](https://hangoutech.com/gaaditracker.github.io/faq/)
+- [Gaadi Tracker vs notebook and WhatsApp](https://hangoutech.com/gaaditracker.github.io/gaadi-tracker-vs-notebook-whatsapp/)
+- [Pricing](https://hangoutech.com/gaaditracker.github.io/pricing/)
+
+## Guides
+
+- [How to calculate driver commission for Uber and Ola cars](https://hangoutech.com/gaaditracker.github.io/blog/driver-commission-uber-ola-cars/)
+- [Road tax due dates for commercial vehicles in India, quarter by quarter](https://hangoutech.com/gaaditracker.github.io/blog/road-tax-due-dates-commercial-vehicles-india/)
+- [How to stop fuel bill padding in your fleet](https://hangoutech.com/gaaditracker.github.io/blog/stop-fuel-bill-padding/)
+
+## Hindi
+
+- [होम](https://hangoutech.com/gaaditracker.github.io/hi/), [टैक्सी](https://hangoutech.com/gaaditracker.github.io/hi/taxi-fleet-management-app/), [ऑटो](https://hangoutech.com/gaaditracker.github.io/hi/auto-rickshaw-owner-app/), [ट्रक](https://hangoutech.com/gaaditracker.github.io/hi/truck-fleet-management-app/)
